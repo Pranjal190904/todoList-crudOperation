@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <title>
+            todoList
+        </title>
+        <style>
+            *{
+                text-align: center;
+            }
+            h1{
+                font-size: x-large;
+                color: brown;
+            }
+        </style>
+     </head>
+     <body>
+        <div>
+            <h1>Add Task:</h1>
+            <form class="container" action="/" method="post">
+                <input type="text" name="x" placeholder="Enter Task">
+                <input type="submit" value="Add ToDo">
+            </form>
+        </div><hr>
+        <div>
+            <h1>Here is the tasks:</h1>
+            <% todos.forEach(list => {%><%= list.todo %><br><% }) %>              
+        </div><hr>
+        <div>
+            <h1>Delete Task:</h1>
+            <form action="/del" method="post">
+                <input type="text" name="n" placeholder="Enter Task to delete">
+                <input type="submit" value="Delete  todo">
+            </form>
+        </div><hr>
+        <div>
+            <h1>Update Task</h1>
+            <form action="/update" method="post">
+                <input type="text" name="a" placeholder="enter task name">
+                <span>=></span>
+                <input type="text" name="b" placeholder="enter new task name">
+                <input type="submit" value="Update Task">
+            </form>
+        </div>
+
+     </body>
+</html>
