@@ -3,9 +3,9 @@ const todoCtrl=require('../controllers/todoControls'); //imported functions
 
 const router=express();
 
-router.get("/", todoCtrl.todoRead);
+router.get("/index", todoCtrl.todoRead);
   
-router.post("/", todoCtrl.todoAdd);
+router.post("/add", todoCtrl.todoAdd);
 
 router.post("/del", todoCtrl.todoDelete);
 

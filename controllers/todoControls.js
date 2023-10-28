@@ -10,7 +10,7 @@ function todoAdd(req,res)
         }
     );
     task.save()
-    .then(()=>res.redirect("/"));
+    .then(()=>res.redirect("/index"));
 };
 
 //function to read and show tasks
@@ -25,7 +25,7 @@ function todoDelete(req,res)
 {
     const todoToDel=req.body.n;
     Todo.findOneAndDelete({todo: todoToDel})
-    .then(()=>res.redirect("/"));
+    .then(()=>res.redirect("/index"));
 }
 
 //function to update tasks
@@ -34,7 +34,7 @@ function todoUpdate(req,res)
     const todoToUpd=req.body.a;
     const todoUpdated=req.body.b;
     const doc=Todo.findOneAndUpdate({todo: todoToUpd},{todo: todoUpdated})
-    .then(()=>res.redirect("/"));
+    .then(()=>res.redirect("/index"));
 }
 
 module.exports={todoAdd,todoRead,todoDelete,todoUpdate}; //exported functions

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Login
+        </title>
+        <style>
+            *{
+                text-align: center;
+            }
+            h1{
+                margin-top: 100px;
+            }
+            .login{
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>LOGIN</h1>
+        <div class="login">
+            <form action="/log" method="post">
+                <input type="text" name="id" placeholder="Enter Your UserId"><br><br>
+                <input type="password" name="pass" placeholder="Enter Password"><br><br>
+                <input type="submit" value="Login">
+            </form>
+        </div><br>
+        <div>
+            <form action="/r" method="post">
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </body>
+</html>

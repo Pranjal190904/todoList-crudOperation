@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser=require("body-parser");
 const router=require("./routes/todoRoutes");
+const routReg=require("./routes/regRoutes");
 
 const app = express();
 const port=process.env.PORT;
@@ -14,6 +15,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/todo_crud')
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(routReg);
 app.use(router);
+
 
 app.listen(port, () => console.log("Server started"));
