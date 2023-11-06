@@ -6,7 +6,7 @@ function todoAdd(req,res)
     const i=req.body.x;
     const task = new Todo(
         {
-            todo: i,
+            todo: i,  
         }
     );
     task.save()

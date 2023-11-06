@@ -16,6 +16,11 @@
      </head>
      <body>
         <div>
+            <form action="/logout" method="post">
+                <input type="submit" value="Logout" style="background-color: yellow; color: red">
+            </form>
+        </div>
+        <div>
             <h1>Add Task:</h1>
             <form class="container" action="/add" method="post">
                 <input type="text" name="x" placeholder="Enter Task">
@@ -42,6 +47,6 @@
                 <input type="submit" value="Update Task">
             </form>
         </div>
-
+        
      </body>
 </html>
